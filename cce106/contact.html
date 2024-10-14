@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-[#f6f1eb] text-[#1e2e40]">
+
+  <header class="flex justify-between items-center p-5">
+     
+    <a href="index.html" class="profile-icon">
+        <img src="assets/LandingPage/Kupkop.png" alt="Profile" class="w-14 h-14 rounded-full">
+    </a>
+      <nav>
+          <ul class="flex gap-8">
+              <li>
+                  <button class="font-bold py-2 px-4 rounded" onclick="location.href='index.html'">
+                      Home
+                  </button>
+              
+              </li>
+              <li> 
+                  <a href="pets.html">
+                      <button type="button" class="font-bold py-2 px-4 rounded">
+                          Adopt
+                      </button>
+                  </a>
+              </li>
+              <li>
+                  <button class="font-bold py-2 px-4 rounded" onclick="location.href='about.html'">
+                      About
+                  </button>
+              </li>
+              <li>
+                  <button class="bg-yellow-400 font-bold py-2 px-4 rounded" onclick="location.href='contact.html'">
+                      Contact
+                  </button>
+              </li>
+          </ul>
+      </nav>
+      <a href="dashboard.html" class="profile-icon">
+        <img src="assets/LandingPage/User (1).png" alt="Profile" class="w-10 h-10 rounded-full">
+    </a>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="flex flex-col items-center py-16">
+    <h1 class="text-8xl font-extrabold text-[#1f2b57] mb-8">Contact Us!</h1>
+    <div class="flex justify-center space-x-40 text-center text-[#1f2b57]" style="transform: translateY(80px);">
+      <!-- Number -->
+      <div>
+        <h2 class="text-xl mb-1 font-bold">Number</h2>
+        <p class="text-base">09123456789</p>
+      </div>
+      <!-- Email -->
+      <div>
+        <h2 class="text-xl mb-1 font-bold">Email</h2>
+        <p class="text-base">petsociety@gmail.com</p>
+      </div>
+      <!-- Address -->
+      <div>
+        <h2 class="text-xl mb-1 font-bold">Address</h2>
+        <p class="text-base">
+          Purok Sto. Niño, Suaybaguio<br>
+          Village, Tagum City, Davao<br>
+          del Norte
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FontAwesome for user icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

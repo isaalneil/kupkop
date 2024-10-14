@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Up Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-opacity-50 flex items-center justify-center h-screen">
+    <!-- Form Modal -->
+    <div class="bg-[#f6f1eb] rounded-lg shadow-lg p-6 w-full max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-bold text-gray-900">Fill up Form</h2>
+        </div>
+
+        <!-- Form -->
+        <form>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+                <!-- First Name -->
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="text" id="firstName" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="First Name">
+                </div>
+
+                <!-- Last Name -->
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="text" id="lastName" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Last Name">
+                </div>
+
+                <!-- Phone Number -->
+                <div>
+                    <label for="phoneNumber" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="text" id="phoneNumber" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Phone Number">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="email" id="email" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Email">
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="text" id="address" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Address">
+                </div>
+
+                <!-- Occupation -->
+                <div>
+                    <label for="occupation" class="block text-sm font-medium text-gray-700"></label>
+                    <input type="text" id="occupation" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Occupation">
+                </div>
+
+                <!-- Source of Income -->
+                <div>
+                    
+                    <select id="income" class="border border-gray-300 rounded-lg p-2 w-full">
+                        <option>Source of Income</option>
+                        <option>Employed</option>
+                        <option>Business</option>
+                        <option>Freelancer</option>
+                    </select>
+                </div>
+
+                <!-- Purpose/Reason -->
+                <div>
+                    <input type="text" id="purpose" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Purpose/Reason">
+                </div>
+
+                <!-- Insert Valid ID -->
+                <div>
+                   
+                    <div class="border border-gray-300 rounded-lg p-2 flex items-center justify-center cursor-pointer" placeholder="Insert Valid ID">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Agreement -->
+            <div class="flex items-center justify-center mb-6">
+                <button type="button" class="bg-blue-600 text-white py-2 px-4 rounded-lg font-bold flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01m-6.938 4h13.856c1.29 0 2.065-1.408 1.432-2.525L13.432 4.475c-.636-1.117-2.228-1.117-2.864 0L3.65 17.475c-.633 1.117.142 2.525 1.432 2.525z"></path>
+                    </svg>
+                    <span>Terms and Agreement</span>
+                </button>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 w-48 rounded-lg">Submit</button>
+                <button type="button" class="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-6 w-48 rounded-lg" onclick="window.location.href='pets.html'; " >Cancel</button>
+            </div>
+           
+        </form>
+    </div>
+</body>
+</html>

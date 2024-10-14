@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupkóp</title>
+    <link rel="icon" href="assets/LandingPage/Kupkop.png" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/output.css">    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-[#f6f1eb] text-[#1e2e40]">
+    
+    <header class="flex justify-between items-center p-5 relative z-20">
+        <a href="index.html" class="profile-icon z-20">
+            <img src="assets/LandingPage/Kupkop.png" alt="Profile" class="w-12 h-12 rounded-full">
+        </a>
+        <nav>
+            <ul class="flex gap-8 z-20">
+                <li>
+                    <a href="index.html" class="bg-yellow-400 font-bold py-2 px-4 rounded z-20">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="pets.html" class="font-bold py-2 px-4 rounded z-20">
+                        Adopt
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="font-bold py-2 px-4 rounded z-20">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="font-bold py-2 px-4 rounded z-20">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="dashboard.html" class="profile-icon z-20">
+            <img src="assets/LandingPage/User (1).png" alt="Profile" class="w-10 h-10 rounded-full">
+        </a>
+    </header>
+    
+
+    <div class="text-center relative bg-cover bg-center" style="background-image: url('assets/LandingPage/index.png'); height: 87vh; background-size: cover; background-position: center;">   
+        <div class="absolute inset-0 flex justify-center items-center " style="transform: translateY(-160px); z-index: 10;">
+            <h1 class="font-extrabold" style="font-size: 100px;">Adopt, Love, Foster.</h1>
+        </div>
+
+        <div class="absolute right-0 text-center" style="transform: translate( -60px, 380px);">
+            <h2 class="font-extrabold text-2xl flex items-center" >What we do?</h2>
+            <p class="max-w-xl text-mb text-left">
+                We connect loving pets from trusted shelters with people ready to adopt. Our platform helps you find the perfect companion and give them a forever home.
+            </p>
+        </div>
+    
+
+        <div class="relative p-8" style="transform: translateY(500px); z-index: 10;">
+            <button class="bg-yellow-400 font-bold py-2 px-4 rounded" onclick="window.location.href='pets.html';">
+                View Pets
+            </button>
+        </div>
+    </div>
+</body>
+</html>

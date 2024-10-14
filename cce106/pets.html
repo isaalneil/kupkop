@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-[#f6f1eb] text-[#1e2e40]">
+
+    <header class="flex justify-between items-center p-5">
+        <a href="index.html" class="profile-icon">
+            <img src="assets/LandingPage/Kupkop.png" alt="Profile" class="w-12 h-12 rounded-full">
+        </a>
+        
+        <nav>
+            <ul class="flex gap-8">
+                <li>
+                    <button class="font-bold py-2 px-4 rounded" onclick="location.href='index.html'">
+                        Home
+                    </button>
+                
+                </li>
+                <li> 
+                    <a href="pets.html">
+                        <button type="button" class="bg-yellow-400 font-bold py-2 px-4 rounded">
+                            Adopt
+                        </button>
+                    </a>
+                    
+                    
+                </li>
+                <li>
+                    <button class="font-bold py-2 px-4 rounded" onclick="location.href='about.html'">
+                        About
+                    </button>
+                </li>
+                <li>
+                    <button class="font-bold py-2 px-4 rounded" onclick="location.href='contact.html'">
+                        Contact
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <a href="dashboard.html" class="profile-icon">
+            <img src="assets/LandingPage/User (1).png" alt="Profile" class="w-10 h-10 rounded-full">
+        </a>
+    </header>
+
+
+    <!-- Search and Settings -->
+    <div class="flex justify-center items-center py-6 px-6">
+        
+        <div class="flex-grow flex items-center border border-gray-300 rounded-lg px-6 py-2">
+            <input type="text" id="searchInput" class="outline-none bg-transparent w-full">
+          
+                <img src="assets/search.svg" alt="Search" class="w-5 h-5">
+           
+        </div>
+        
+    </div>
+
+    <!-- Pets Grid -->
+    <section class="px-6 pb-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+           
+   <!-- Pet Card -->
+    <!-- Clickable image to trigger popup -->
+    
+    <!-- Card content -->
+  
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/pexels-mithulvarshan-2318990.png" alt="Brownie" class="w-full h-48 object-cover cursor-pointer" onclick="openPopup('popupModal')">
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-cookie" class="font-bold text-lg">Brownie</h3>
+                        <p id="age-cookie" class="text-gray-600">Age: 1 year</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/pexels-poodles2doodles-1458916.png" alt="Cookie" class="w-full h-48 object-cover cursor-pointer" onclick="openPopup('cookieModal')">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-cookie" class="font-bold text-lg">Cookie</h3>
+                        <p id="age-cookie" class="text-gray-600">Age: 4 months</p>
+                    </div>
+                </div>
+            </div>            
+
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/ammar-el-attar-WK6RaQ4b_Ts-unsplash.jpg" alt="Ace" class="w-full h-48 object-cover cursor-pointer"  onclick="openPopup('aceModal')">
+                           
+                <div class="p-6">
+                    <div class="flex justify-between items-center ">
+                        <h3 id="name-ace" class="font-bold text-lg">Ace</h3>
+                        <p id="age-ace" class="text-gray-600">Age: 3 months</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/pexels-amalsanthosh-662417.png" alt="Azzii" class="w-full h-48 object-cover  cursor-pointer"  onclick="openPopup('azziiModal')">
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-azzii" class="font-bold text-lg">Azzii</h3>
+                        <p id="age-azzii" class="text-gray-600">Age: 5 years</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More pet cards -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/pexels-charlesdeluvio-1851164.png" alt="Pepper" class="w-full h-48 object-cover  cursor-pointer"  onclick="openPopup('pepperModal')">
+              
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-pepper" class="font-bold text-lg">Pepper</h3>
+                        <p id="age-pepper" class="text-gray-600">Age: 3 years</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/dgong.jpg" alt="Digong" class="w-full h-48 object-cover cursor-pointer"  onclick="openPopup('digongModal')">
+                <div class="p-6">
+                    <div class="flex justify-between items-center ">
+                        <h3 id="name-digong" class="font-bold text-lg">Digong</h3>
+                        <p id="age-digong" class="text-gray-600">Age: 6 years</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/pexels-valeriya-1805164.png" alt="Shib" class="w-full h-48 object-cover cursor-pointer"  onclick="openPopup('shibModal')">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-shib" class="font-bold text-lg">Shib</h3>
+                        <p id="age-shib" class="text-gray-600">Age: 3 years</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden pet-card">
+                <img src="assets/Adopt images/ayush-sharma-EmfHWfSi1_8-unsplash.jpg" alt="Chuck" class="w-full h-48 object-cover cursor-pointer"  onclick="openPopup('chuckModal')">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 id="name-chuck" class="font-bold text-lg">Chuck</h3>
+                        <p id="age-chuck" class="text-gray-600">Age: 2 years</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+<!-- Popup Modal (Hidden by default) -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden " onclick="closePopup(event,'popupModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/pexels-mithulvarshan-2318990.png" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Brownie</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 1 year</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px); ">
+                    Brownie is a playful and friendly dog, looking for a loving home. He enjoys playing fetch and cuddling with his <br> favorite humans. He's great with kids and other pets. <br> Brownie would love to join a family that can give him <br> plenty of attention and outdoor time. He is healthy, <br> vaccinated, and ready for adoption.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">
+                    <!-- <button class="bg-yellow-400 font-bold py-2 px-8  rounded" onclick="window.location.href='form.html'; " style="transform: translateY(70px);">
+                        Adopt
+                    </button> -->
+                   
+                <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                Adopt
+                </button>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Popup Modal (Hidden by default) -->
+ <div id="cookieModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'cookieModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/pexels-poodles2doodles-1458916.png" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Cookie</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 4 months</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px);">
+                    Cookie is an energetic and playful puppy with a heart full of love. He loves to explore and is always ready for an <br> adventure. Cookie is friendly with kids and other pets, <br> making him the perfect companion for an active family. <br> He’s healthy, vaccinated, and eager to find his forever <br> home where he can grow and thrive.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="aceModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden " onclick="closePopup(event, 'aceModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/ammar-el-attar-WK6RaQ4b_Ts-unsplash.jpg" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Ace</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 3 months</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px);">
+                    Ace is a curious and lively kitten who loves to chase after <br> toys and climb to high places. He enjoys quiet cuddles after playtime and is especially affectionate with his humans. <br> Ace is great with other cats and would make a wonderful addition to any home that offers him both love and space to roam. He is vaccinated, healthy, and ready for adoption.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(120px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="azziiModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'azziiModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/pexels-amalsanthosh-662417.png" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2">
+                <h3 class="font-bold text-3xl mb-2 text-col" style="transform: translate(10px, 40px);">Azzii</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p>Details</p>
+                    <p>Age: 5 years</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px); max-width: 500px; ">
+                    Azzii is a calm and loyal dog with a gentle personality. He enjoys leisurely walks and spending time with his favorite people. Azzii is well-trained, great with children, and gets along well with other pets. He’s looking for a loving home where he can relax and enjoy life. Vaccinated and in good health, Azzii is ready to be a loyal companion.
+                </p>
+            
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded" style="transform: translateY(70px);" onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+
+<div id="pepperModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'pepperModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/pexels-charlesdeluvio-1851164.png" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Pepper</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 3 years</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px); ">
+                    Pepper is a playful and affectionate dog who loves to run around and play fetch. She’s friendly, intelligent, and eager <br> to please. Pepper thrives on attention and enjoys being <br> around people, especially those who can keep up with her energy. She’s healthy, vaccinated, and ready for adoption, looking for, family that will love and cherish her.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="digongModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'digongModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/dgong.jpg" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Digong</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 6 years</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px);">
+                    Digong is a wise and independent cat who enjoys lounging <br> in sunny spots and observing his surroundings. He’s calm, composed, and loves gentle petting sessions. Though <br> Digong values his alone time, he also enjoys quiet <br> moments with his humans. He’s healthy, vaccinated, and <br> ready to find a peaceful home where he can live <br> comfortably.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="shibModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'shibModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/pexels-valeriya-1805164.png" alt="Brownie" class="w-full h-72">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Shib</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 3 years</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px);">
+                    Shib is a friendly and energetic dog who loves outdoor activities. He enjoys long walks and playing with his toys. <br> Shib is well-behaved, great with children, and would fit well into an active family. He’s healthy, vaccinated, and ready to <br> find his forever home with a loving family that can give him <br> the exercise and attention he needs.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>  
+        
+    </div>
+</div>
+
+<div id="chuckModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" onclick="closePopup(event, 'chuckModal')">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl" onclick="event.stopPropagation()">
+        
+        <!-- Popup content arranged in two columns -->
+        <div class="flex ">
+            <!-- Left Side: Image -->
+            <div class="w-1/2">
+                <img src="assets/Adopt images/ayush-sharma-EmfHWfSi1_8-unsplash.jpg" alt="Brownie" class="w-full h-64">
+            </div>
+            
+            <!-- Right Side: Pet Details -->
+            <div class="w-1/2" > <!-- Added margin-top here -->
+                <h3 class="font-bold  text-3xl mb-2 text-col " style="transform: translate(10px, 40px);">Chuck</h3>
+                <div class="flex grid grid-cols-2 gap-50 items-center mb-4 font-bold" style="transform: translate(10px, 60px);">
+                    <p >Details</p>
+                    <p>Age: 2 years</p>
+                </div>
+                <p class="text-gray-800 mb-4" style="transform: translate(10px, 60px);">
+                    Chuck is a curious and playful cat who loves to explore his environment. He enjoys playing with toys and climbing to <br> high places, but also appreciates quiet time curled up in a <br> cozy spot. Chuck is friendly with other cats and loves interacting with his humans. He’s healthy, vaccinated, and ready for adoption into a loving home that can offer him companionship and care.
+                </p>
+                
+                <!-- Adopt Button -->
+                <div class="mt-4 flex justify-center">                                    
+                    <button class="bg-yellow-400 font-bold py-2 px-8 rounded"   style="transform: translateY(70px);"   onclick="openPopup('formModal')">
+                        Adopt
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- Modal Background -->
+<div id="formModal" class=" hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center ">
+   <!-- Form Modal -->
+   <!-- Form Modal -->
+   <div class="bg-[#f6f1eb] rounded-lg shadow-lg p-6 w-full max-w-4xl">
+    <!-- Header -->
+    <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-900">Fill up Form</h2>
+    </div>
+
+ <!-- Form -->
+ <form>
+    <div class="grid grid-cols-3 gap-8 mb-8">
+        <!-- First Name -->
+        <div>
+            <label for="firstName" class="block text-sm font-medium text-gray-700"></label>
+            <input type="text" id="firstName" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="First Name">
+        </div>
+
+        <!-- Last Name -->
+        <div>
+            <label for="lastName" class="block text-sm font-medium text-gray-700"></label>
+            <input type="text" id="lastName" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Last Name">
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+            <label for="phoneNumber" class="block text-sm font-medium text-gray-700"></label>
+            <input type="text" id="phoneNumber" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Phone Number">
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"></label>
+            <input type="email" id="email" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Email">
+        </div>
+
+        <!-- Address -->
+        <div>
+            <label for="address" class="block text-sm font-medium text-gray-700"></label>
+            <input type="text" id="address" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Address">
+        </div>
+
+        <!-- Occupation -->
+        <div>
+            <label for="occupation" class="block text-sm font-medium text-gray-700"></label>
+            <input type="text" id="occupation" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Occupation">
+        </div>
+
+        <!-- Source of Income -->
+        <div>
+            
+            <select id="income" class="border border-gray-300 rounded-lg p-2 w-full">
+                <option>Source of Income</option>                    <option>Employed</option>
+                <option>Business</option>
+                <option>Freelancer</option>
+            </select>
+        </div>
+
+        <!-- Purpose/Reason -->
+        <div>
+            <input type="text" id="purpose" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Purpose/Reason">
+        </div>
+
+        <!-- Insert Valid ID -->
+        <div>
+           
+            <div class="border border-gray-300 rounded-lg p-2 flex items-center justify-center cursor-pointer mb-6 relative">
+                <!-- Input for image selection (hidden, triggered by the container click) -->
+                <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer " id="imageInput" onchange="previewImage()">
+                
+                <!-- SVG Icon (to be shown as a placeholder) -->
+                <svg class="h-6 w-6 text-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg>
+                
+                <!-- Image Preview (hidden initially) -->
+                <img id="imagePreview" class="hidden w-full h-32 object-cover mt-2 rounded-lg" alt="Image Preview">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Terms and Agreement -->
+    <div class="flex items-center justify-center mb-6">
+        <button type="button" class="bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold text-sm flex items-center space-x-2" onclick="openModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-yellow-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01m-6.938 4h13.856c1.29 0 2.065-1.408 1.432-2.525L13.432 4.475c-.636-1.117-2.228-1.117-2.864 0L3.65 17.475c-.633 1.117.142 2.525 1.432 2.525z"></path>
+            </svg>
+            <span>Terms and Agreement</span>
+        </button>
+    </div>
+
+  
+    <!-- Buttons -->
+    <div class="items-center justify-center flex gap-4 font-bold text-black">
+        <button  class="bg-yellow-400 hover:bg-yellow-500 py-2 px-6 w-1/3 rounded-lg inline-block">Submit</button>
+        <button class="bg-gray-300 hover:bg-gray-400 py-2 px-6 w-1/3 rounded-lg inline-block" onclick="window.location.href='pets.html';">Cancel</button>
+   </div>
+    
+   
+</form>
+
+
+</div>
+</div>
+
+    
+<!-- Modal Background -->
+<div id="termsModal" class="bg-red-600 fixed inset-0 flex items-center justify-center hidden">
+    <!-- Modal Container -->
+    <div class="bg-[#f6f1eb] rounded-lg w-1/6 max-h-64 overflow-y-auto ">
+        <!-- Modal Header -->
+        <h2 class="text-4xl font-bold text-center p-8">Terms and Agreement for Pet Adoption</h2>
+
+        <!-- Modal Content -->
+        <div class="bg-gray-100 p-8 border-4 border-black box-border">
+
+            <!-- Section 1: Adoption Responsibility -->
+             
+            <div class="mb-4">
+                <h3 class="font-bold">1. Adoption Responsibility</h3>
+                <p class="text-sm">By adopting a pet through our platform, you acknowledge and agree that:</p>
+                <ul class="list-disc list-inside ml-4 mt-2 text-sm">
+                    <li>- You will provide a safe, loving, and caring environment for the pet.</li>
+                    <li>- The pet will not be used for illegal purposes, including but not limited to animal meat consumption.</li>
+                    <li>- You will ensure that the pet's health, safety, and well-being are prioritized at all times.</li>
+                </ul>
+            </div>
+
+            <!-- Section 2: Regular Updates -->
+            <div class="mb-4">
+                <h3 class="font-bold">2. Regular Updates (3 Months)</h3>
+                <p class="text-sm">As part of this adoption agreement, you are required to provide updates on the pet's condition for the next 3 months. This includes:</p>
+                <ul class="list-disc list-inside ml-4 mt-2 text-sm">
+                    <li> - Monthly check-ins via email or phone to update the pet’s well-being, health, and living conditions.</li>
+                    <li> - Sharing recent photos and a brief report on the pet’s adjustment, behavior, and overall health.</li>
+                    <li> - This is to ensure the pet is in a safe environment and is well taken care of.</li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Penalties for Failure to Provide Updates -->
+            <div>
+                <h3 class="font-bold">3. Penalties for Failure to Provide Updates</h3>
+                <p class="text-sm">If you fail to provide the required updates within the 3-month period, the following actions may be taken:</p>
+                <ul class="list-disc list-inside ml-4 mt-2 text-sm">
+                    <li><strong>  - First Offense:</strong> A formal warning will be issued, and a reminder will be sent to you via email or phone to submit the required update within 7 days.</li>
+                    <li><strong>  - Second Offense:</strong> If no update is received after the initial warning, a fine of PHP 5,000 will be imposed.</li>
+                    <li><strong>  - Final Offense:</strong> Failure to comply after the fine will result in revocation of adoption rights, and the pet may be retrieved to secure its safety.</li>
+                </ul> 
+            </div>
+        </div>
+        
+
+        <!-- Modal Footer (Checkbox and Buttons) -->
+        <div class="flex items-center justify-center p-4">
+            <!-- Checkbox and Label Section -->
+            <div class="font-bold" style="transform: translateX(-190px);">
+                <input id="agree" type="checkbox" class="mr-2 h-4 w-4 text-yellow-500 border-gray-300 rounded">
+                <label for="agree" class="text-mb text-gray-600">I agree to the terms and conditions.</label>
+            </div>
+
+            <!-- Button Section -->
+          
+            <div class="flex items-center justify-center gap-4 p-4">
+                <button class="bg-yellow-400 text-black font-semibold py-2 px-8 rounded" onclick="closeModal()">OK</button>
+                <button class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-8 rounded" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Confirmation Modal (Appears when OK is clicked) -->
+<div id="confirmModal" class="bg-red-600 fixed inset-0 flex items-center justify-center hidden">
+    <div class="bg-[#f6f1eb] rounded-lg w-2/5 h-64">
+        <h2 class="text-4xl font-bold text-center p-8">Are you sure?</h2>
+        <div class="flex items-center justify-center gap-8 p-4">
+            <button class="bg-yellow-400 text-black font-semibold py-2 px-8 rounded" id="confirmYes">Yes</button>
+            <button class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-8 rounded" id="confirmCancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Sent Modal (Appears after clicking Yes) -->
+<div id="sentModal" class="bg-red-600 fixed inset-0 flex items-center justify-center hidden">
+    <div class="bg-[#f6f1eb] rounded-lg w-2/5 h-64">
+        <h2 class="text-4xl font-bold text-center p-8">Sent</h2>
+        <div class="flex items-center justify-center gap-8 p-4">
+            <button class="bg-yellow-400 text-black font-semibold py-2 px-8 rounded" onclick="closeSentModal()">OK</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Function to toggle a modal's visibility
+   // Function to toggle a modal's visibility
+function toggleModal(show, modalId) {
+    const modal = document.getElementById(modalId);
+    
+    if (show) {
+        modal.classList.remove('hidden');  // Show the modal
+    } else {
+        modal.classList.add('hidden');  // Hide the modal
+    }
+}
+
+// Function to open a specific modal, including the Cookie modal
+function openPopup(modalId) {
+    // Ensure to close other modals before opening the requested one
+    toggleModal(false, 'popupModal');
+    toggleModal(false, 'cookieModal');    
+    toggleModal(false, 'aceModal');   
+    toggleModal(false, 'pepperModal');
+    toggleModal(false, 'digongModal');    
+    toggleModal(false, 'shibModal');   
+    toggleModal(false, 'chuckModal');
+    toggleModal(false, 'formModal');
+    toggleModal(false, 'confirmModal');
+
+    // Open the requested modal
+    toggleModal(true, modalId);
+}
+
+// Function to close the popup (including when clicking outside)
+function closePopup(event, modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal && event.target === modal) {
+        toggleModal(false, modalId);
+    }
+}
+
+// Function to open the Terms and Agreement modal
+function openModal() {
+    toggleModal(true, 'termsModal');
+}
+
+// Function to close the Terms and Agreement modal
+function closeModal() {
+    toggleModal(false, 'termsModal');
+}
+
+
+
+    //function for search
+    document.getElementById('searchInput').addEventListener('input', function() {
+    let searchQuery = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.pet-card');
+
+    cards.forEach(function(card) {
+        // Get the content of the name and age using their respective IDs
+        let name = card.querySelector('h3').textContent.toLowerCase();
+        let age = card.querySelector('p').textContent.toLowerCase();
+
+        // Check if search query matches the name or age
+        if (name.includes(searchQuery) || age.includes(searchQuery)) {
+            card.style.display = ''; // Show the card
+        } else {
+            card.style.display = 'none'; // Hide the card
+        }
+    });
+});
+
+
+
+</script>
+
+
+
+    </section>
+
+</body>
+</html>

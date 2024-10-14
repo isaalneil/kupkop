@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-[#f6f1eb] text-[#1e2e40]">
+
+    <!-- Main Content with Pet Grid -->
+    <div class="container mx-auto px-6 py-10">
+        <div class="grid grid-cols-4 gap-6">
+            <!-- Pet Card Example -->
+            <div class="relative" onclick="openModal('Ace')">
+                <img src="cat1.jpg" alt="Ace" class="w-full h-auto rounded-lg">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white bg-opacity-70">
+                    <h3 class="font-bold text-lg">Ace</h3>
+                    <p>Age: 3 months</p>
+                </div>
+            </div>
+            <!-- Repeat for other pets -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="petModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg w-2/3">
+            <div class="flex justify-end p-4">
+                <button onclick="closeModal()" class="text-gray-500 hover:text-black">&times;</button>
+            </div>
+            <div class="flex">
+                <div class="w-1/2">
+                    <img id="petImage" src="cat1.jpg" alt="Pet Image" class="w-full h-auto">
+                </div>
+                <div class="w-1/2 p-8">
+                    <h2 id="petName" class="text-4xl font-bold mb-4">Ace</h2>
+                    <p class="text-lg font-semibold">Details</p>
+                    <p class="mb-4">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                    <p class="text-lg font-semibold">Age: 3 months</p>
+                    <button class="mt-6 bg-[#ffd700] text-[#1e2e40] font-bold py-3 px-6 rounded-full hover:bg-yellow-600">Adopt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(petName) {
+            document.getElementById("petModal").classList.remove("hidden");
+            // Optionally set the content dynamically, based on the pet name or other data
+            document.getElementById("petName").innerText = petName;
+            document.getElementById("petImage").src = petName.toLowerCase() + ".jpg";
+        }
+
+        function closeModal() {
+            document.getElementById("petModal").classList.add("hidden");
+        }
+    </script>
+</body>
+
+</html>

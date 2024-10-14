@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1eb;
+    color: #1e2e40;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    background-color: #f6f1eb;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e2e40;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    background-color: #ffd700;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1e2e40;
+    margin-bottom: 20px;
+}
+
+.pets {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pets img {
+    width: 150px;
+    height: auto;
+}
+
+.cats {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+}
+
+.cat-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+}
+
+.view-pets {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #ffd700;
+    color: #1e2e40;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.what-we-do {
+    text-align: center;
+    padding: 40px;
+}
+
+.what-we-do h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.what-we-do p {
+    font-size: 16px;
+    color: #3e4e60;
+    max-width: 600px;
+    margin: 0 auto;
+}

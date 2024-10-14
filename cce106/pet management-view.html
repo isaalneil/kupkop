@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f6f1eb]">
+
+  <header class="flex justify-between items-center p-5 bg-[#f6f1eb]  border-2">
+    <a href="index.html">
+        <h1 class="text-4xl font-bold text-gray-800 ml-16">Kupkóp</h1>
+    </a>
+    
+    
+ 
+    <div class="profile-icon">
+        <img src="assets/LandingPage/User (1).png" alt="Profile" class="w-12 h-12 rounded-full">
+    </div>
+</header>
+
+
+    <div class="flex min-h-screen bg-[#f6f1eb]">
+        <!-- Sidebar -->
+        <aside class="w-1/5 border-2">
+            <div class="p-4">
+                <ul>
+                    <li class="mb-8">
+                        <a href="dashboard.html" class=" block px-4 py-2 text-lg font-semibold rounded-md h-16 flex items-center justify-center">DASHBOARD</a>
+                    </li>
+                    <li class="mb-8">
+                        <a href="pet management.html" class=" block px-4 py-2 text-lg font-semibold bg-yellow-400 rounded-md h-16 flex items-center justify-center">PET MANAGEMENT</a>
+                    </li>
+                    <li >
+                        <a href="adoption request.html" class="block px-4 py-2 text-lg font-semibold hover: rounded-md flex items-center justify-center">ADOPTION REQUEST</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="flex h-screen ">
+      
+        
+            <!-- Main Content -->
+            <div class="flex-1 p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-2xl font-semibold">Pet Profile</h1>
+                   
+                </div>
+        
+                <div class="flex border rounded-lg border-black p-8 ml-28  space-x-12">
+                    <!-- Image Upload Section -->
+                    <div class="w-full bg-white border rounded-xl flex justify-center items-center h-112 ">
+                        <p class="text-gray-500">Image Display that Uploaded</p>
+                    </div>
+        
+                    <!-- Form Section -->
+                    <div class="w-1/2">
+                        <div class="mb-4 flex items-center ml-52">
+                            <button class="bg-[#1F2A44] text-white py-2 px-4 rounded-md"  onclick="window.location.href='pet management-edit.html'">Edit</button>
+                        </div>
+
+                        <div class="mb-4 flex items-center space-x-10">
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name: </label>
+                            <label for="name" class="block text-2xl font-semibold text-gray-700 mb-2">Edgar </label>
+                        </div>
+                                            
+                        <div  class="mb-6 flex items-center space-x-12">
+                                <label for="age" class="text-sm font-semibold text-gray-700 ">Age: </label>                               
+                            <label for="name" class="text-2xl font-semibold text-gray-700  ml-8">2 </label>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="description" class="block text-sm font-semibold text-gray-700 mb-2">Description:</label>
+                        </div>
+                        <div  class="mb-4 flex items-center space-x-10">
+                            <label for="status" class="block text-sm font-semibold text-gray-700 mb-2">Status:</label>
+                            
+                            <label for="name" class="block text-4xl font-semibold text-gray-700 mb-2">Available </label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

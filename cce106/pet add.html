@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 bg-opacity-50 flex items-center justify-center h-screen">
+    <!-- Modal -->
+    <div class="bg-gray-100 rounded-lg shadow-lg p-6 w-96">
+        <!-- Modal Header -->
+        <div class="text-center mb-4">
+            <h2 class="text-xl font-bold text-gray-900">Upload</h2>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="border-2 border-dashed border-gray-400 rounded-lg p-6 flex flex-col items-center justify-center text-gray-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-12 w-12 text-gray-400 mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16l6-6m0 0l6 6m-6-6v12"/>
+            </svg>
+            <p class="text-sm">Drag and Drop file here or <a href="#" class="text-blue-500 underline">Choose File</a></p>
+        </div>
+
+        <!-- Form Fields -->
+        <form>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" class="border border-gray-300 rounded-lg p-2 w-full">
+                </div>
+                
+                <!-- Age Field -->
+                <div>
+                    <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                    <input type="text" id="age" class="border border-gray-300 rounded-lg p-2 w-full">
+                </div>
+            </div>
+
+            <!-- Details Field -->
+            <div class="mb-4">
+                <label for="details" class="block text-sm font-medium text-gray-700">Details</label>
+                <textarea id="details" rows="3" class="border border-gray-300 rounded-lg p-2 w-full"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-between">
+                <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg">Submit</button>
+                <button type="button" class="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-lg">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
